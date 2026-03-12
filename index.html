@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rain — Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Site Name">Rain</div>
+      <nav aria-label="Main navigation" class="nav">
+        <a href="#about">About</a>
+        <a href="#xp">Hobbies & XP</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+        <button id="surpriseBtn" class="theme-toggle" aria-label="Surprise">🎲</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="avatar" aria-label="Avatar">
+        <span class="avatar-initials">R</span>
+      </div>
+      <div class="hero-content">
+        <h1>Hi, I am <span class="name">Rain</span></h1>
+        <p class="subtitle">Male • Born 2010 • Badminton & Gaming Enthusiast</p>
+        <p class="lead">An avid gamer and badminton lover who turns interests into engaging stories and creations.</p>
+        <div class="chips" aria-label="Hobbies">
+          <span class="chip">Badminton</span>
+          <span class="chip">Gaming</span>
+          <span class="chip">Creative Design</span>
+        </div>
+        <button id="surpriseBtn2" class="cta" aria-label="Surprise style">Surprise style</button>
+      </div>
+    </section>
+
+    <section id="about" class="card-section">
+      <h2>About Me</h2>
+      <p>I'm Rain, a young enthusiast with a passion for games and sports. I enjoy turning interests into engaging narratives and creations.</p>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">2010</div>
+          <div class="stat-label">Birth Year</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Badminton</div>
+          <div class="stat-label">Hobby</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Gaming</div>
+          <div class="stat-label">Hobby</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="xp" class="card-section">
+      <h2>Hobbies & Achievements (XP)</h2>
+      <div class="xp-grid">
+        <div class="xp-item">
+          <div class="donut" id="gamingXP" aria-label="Gaming XP"></div>
+          <div class="xp-label">Gaming XP</div>
+        </div>
+        <div class="xp-item">
+          <div class="donut" id="badmintonXP" aria-label="Badminton XP"></div>
+          <div class="xp-label">Badminton XP</div>
+        </div>
+      </div>
+      <div class="xp-actions">
+        <button class="btn" id="xpPulse">Boost XP</button>
+        <button class="btn" id="surprisePalette">Switch palette</button>
+      </div>
+      <div id="xpQuote" class="quote" aria-live="polite">"Small progress compounds into great achievements."</div>
+    </section>
+
+    <section id="projects" class="card-section">
+      <h2>Projects / Favorite Games</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media image-skeleton" aria-label="project image">Don’t Starve Together</div>
+          <div class="card-content">
+            <h3>Don’t Starve Together</h3>
+            <p>Cooperative survival game; my contributions include exploration, planning, and UI polish in mods.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media image-skeleton" aria-label="project image">Brotato</div>
+          <div class="card-content">
+            <h3>Brotato</h3>
+            <p>Roguelike shooter with a focus on character builds and strategy.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media image-skeleton" aria-label="Badminton intro">
+            <div style="padding:12px;text-align:left;">
+              <strong>Badminton: A Fast-Paced Sport</strong>
+              <p style="margin:6px 0 0; font-weight:400; color:#555;">Badminton is a fast-paced racquet sport played by two or four players. It emphasizes agility, endurance, and precise coordination, with quick rallies and strategic placement of shots across a rectangular court.</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Badminton Overview</h3>
+            <p>Overview of badminton as a sport—rules, equipment, and key skills.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card-section">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="contact-form" autocomplete="on" onsubmit="handleSubmit(event)">
+        <div class="row">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            Email
+            <input type="email" name="email" placeholder="Your email" required />
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Your message…" required></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">Send</button>
+      </form>
+      <div id="formStatus" class="form-status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>&copy; <span id="year"></span> Rain. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
